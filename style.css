@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+a.active {
+    font-weight: bold;
+}
+
+header {
+    padding: 2rem;
+    background-color: rgb(185, 219, 253);
+    margin-bottom: 1rem;
+}
+
+#app {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+section {
+    columns: 3;
+    column-gap: 1rem;
+}
+
+section img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
