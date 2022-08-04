@@ -17,13 +17,22 @@ const makeLinkActive = () => {
     currentLink.classList.add('active')
 }
 
+const addCurrentPageAsClassToBody = () => {
+    const { pathname } = location
+    const route = routes[pathname]
+    const [_, pages, file] = route.split('/')
+    const [className] = file.split('.')
+    document.body.setAttribute('class', className)
+}
+
 const routes = {
     "/": "/pages/home.html",
     "/gallery": "/pages/gallery.html"
 }
 
-const handleLocation = async currentLink => {
+const handleLocation = async () => {
     makeLinkActive()
+    addCurrentPageAsClassToBody()
 
     // pegar o caminho atual que estou
     const { pathname } = location
